@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Teste tes connaissances de l'espace avec AstroQuiz, le quiz cosmique."
+    />
+    <meta name="theme-color" content="#090b1a" />
+    <title>AstroQuiz — Cap sur les étoiles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="stars" aria-hidden="true"></div>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="AstroQuiz, accueil">
+          <span class="brand-icon" aria-hidden="true">✦</span>
+          <span>ASTRO<span class="brand-accent">QUIZ</span></span>
+        </a>
+        <span class="topbar-note"><span class="live-dot"></span> MISSION EN COURS</span>
+      </header>
+
+      <section class="game-layout" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow"><span>✧</span> TON VOYAGE COMMENCE ICI</p>
+          <h1 id="page-title">Cap sur<br />les <span>étoiles.</span></h1>
+          <p class="intro-copy">
+            Prêt·e à explorer l'univers ? Réponds à 8 questions et découvre si tu as
+            l'étoffe d'un·e astronaute.
+          </p>
+          <div class="mission-stats" aria-label="Détails de la mission">
+            <div class="stat">
+              <span class="stat-icon" aria-hidden="true">◷</span>
+              <span><strong>2 MIN</strong><small>temps estimé</small></span>
+            </div>
+            <span class="stat-divider" aria-hidden="true"></span>
+            <div class="stat">
+              <span class="stat-icon" aria-hidden="true">✧</span>
+              <span><strong>8 QUESTIONS</strong><small>pour tout explorer</small></span>
+            </div>
+          </div>
+          <p class="orbit-decoration" aria-hidden="true">✦</p>
+        </div>
+
+        <section class="quiz-card" aria-label="Quiz sur l'espace">
+          <div id="quiz-screen">
+            <div class="card-topline">
+              <span class="category-pill"><span aria-hidden="true">◉</span> CULTURE SPATIALE</span>
+              <span class="question-count" id="question-count">01 <span>/ 08</span></span>
+            </div>
+
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-label="Progression du quiz"
+              aria-valuemin="0"
+              aria-valuemax="8"
+              aria-valuenow="0"
+            >
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div class="question-block" aria-live="polite">
+              <p class="question-kicker" id="question-kicker">QUESTION 01</p>
+              <h2 id="question-text">Chargement de la question…</h2>
+            </div>
+
+            <div class="answers" id="answers" role="group" aria-label="Choisis une réponse"></div>
+            <p class="feedback" id="feedback" aria-live="polite"></p>
+
+            <div class="card-footer">
+              <span class="score-label">SCORE <strong id="score">0</strong></span>
+              <button class="next-button" id="next-button" type="button" disabled>
+                <span id="next-label">QUESTION SUIVANTE</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="result-screen" id="result-screen" hidden aria-live="polite">
+            <div class="result-icon" id="result-icon" aria-hidden="true">✦</div>
+            <p class="question-kicker">MISSION TERMINÉE</p>
+            <h2 id="result-title">Bien joué, cosmonaute !</h2>
+            <p class="result-score"><span id="final-score">0</span><span> / 8</span></p>
+            <p class="result-message" id="result-message"></p>
+            <button class="restart-button" id="restart-button" type="button">
+              <span aria-hidden="true">↻</span> REJOUER
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <footer class="page-footer">
+        <span>FAIT AVEC <span class="heart" aria-label="amour">♥</span> ET UN PEU DE POUSSIÈRE D'ÉTOILES</span>
+        <span>GALAXIE TERRE · <span id="year"></span></span>
+      </footer>
+    </main>
+  </body>
+</html>
