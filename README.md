@@ -10,11 +10,13 @@ JavaScript natifs : aucune installation ni compilation n'est nécessaire.
 
 ## Déploiement GitHub Pages
 
-Le workflow `.github/workflows/deploy.yml` publie automatiquement le site sur
-GitHub Pages à chaque push sur `main` (ou manuellement depuis l'onglet Actions).
-
 Dans le dépôt GitHub, ouvre **Settings → Pages**, puis choisis
-**GitHub Actions** comme source de déploiement. Une fois le workflow terminé,
-le site sera disponible à l'adresse :
+**GitHub Actions** comme source de déploiement. Cette activation initiale doit
+être faite dans les paramètres du dépôt.
+
+Le workflow `.github/workflows/deploy.yml` publie ensuite automatiquement le
+site à chaque push sur `main` (ou manuellement depuis l'onglet Actions).
+
+Une fois le workflow terminé, le site sera disponible à l'adresse :
 
 `https://hordricjr.github.io/Demo-git-dev-day/`
